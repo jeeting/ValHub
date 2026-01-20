@@ -1,5 +1,3 @@
--- Vel Hub Library V2
--- Enhanced UI Library with improved features and bug fixes
 
 local InputService = game:GetService('UserInputService')
 local TextService = game:GetService('TextService')
@@ -34,15 +32,14 @@ local Library = {
     RegistryMap = {},
     HudRegistry = {},
 
-    -- Enhanced color scheme
     FontColor = Color3.fromRGB(255, 255, 255),
     MainColor = Color3.fromRGB(25, 25, 25),
     BackgroundColor = Color3.fromRGB(15, 15, 15),
-    AccentColor = Color3.fromRGB(88, 101, 242), -- Discord blurple
+    AccentColor = Color3.fromRGB(88, 101, 242), 
     OutlineColor = Color3.fromRGB(60, 60, 60),
-    RiskColor = Color3.fromRGB(237, 66, 69), -- Discord red
-    SuccessColor = Color3.fromRGB(87, 242, 135), -- Discord green
-    WarningColor = Color3.fromRGB(254, 231, 92), -- Discord yellow
+    RiskColor = Color3.fromRGB(237, 66, 69),
+    SuccessColor = Color3.fromRGB(87, 242, 135),
+    WarningColor = Color3.fromRGB(254, 231, 92),
 
     Black = Color3.new(0, 0, 0),
     Font = Enum.Font.Gotham, -- Better font
@@ -52,14 +49,12 @@ local Library = {
     Signals = {},
     ScreenGui = ScreenGui,
 
-    -- V2 Features
     WatermarkEnabled = true,
     KeybindListEnabled = true,
     NotificationQueue = {},
     Unloaded = false,
 }
 
--- Enhanced tween function
 function Library:CreateTween(object, tweenInfo, properties)
     local tween = TweenService:Create(object, tweenInfo, properties)
     tween:Play()
